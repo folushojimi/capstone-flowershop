@@ -1,11 +1,32 @@
 import AuthForm from "./AuthForm"
 
 const SignUp =()=>{
+ 
+
     return(
         <>
 
-         <AuthForm/>
-     {/* <h1>SignUp</h1> */}
+       <div className="flex justify-center">
+         <AuthForm 
+         
+         fields={[
+            {
+                label:"username",
+                type:"text"
+            },
+            {
+                label:"password",
+                type:"password"
+            },
+            {
+                label:"confirm password",
+                type:"password"
+            },
+         ]}
+           
+        submitButtonLabel="create account"
+         />
+         </div>
 
         </>
     )
