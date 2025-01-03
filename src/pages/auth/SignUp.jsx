@@ -1,13 +1,15 @@
 import AuthForm from "./AuthForm"
-
+import Firstpage from "./firstpage"
+import { Link } from "react-router-dom"
 const SignUp =()=>{
  
 
     return(
         <>
 
-       <div className="flex justify-center">
-         <AuthForm 
+         <Firstpage>
+         <div className="flex justify-center">
+         <AuthForm
          
          fields={[
             {
@@ -27,7 +29,12 @@ const SignUp =()=>{
         submitButtonLabel="create account"
          />
          </div>
+         <Link to={"/"} className="">sign in</Link> 
+         </Firstpage>
 
+
+       
+ 
         </>
     )
 }
