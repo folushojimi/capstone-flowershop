@@ -19,3 +19,25 @@ const App=()=> {
 }
 
 export default App
+
+
+
+{/* <div className="flex justify-center">
+       <AuthForm
+       
+       fields={[
+          {
+            label:"username",
+            type:"text"
+          },
+          {
+            label:"password",
+            type:"password"
+          },
+       ]}
+       
+        submitButtonLabel="sign in"
+       />
+       </div> */}
+       
+  

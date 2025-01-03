@@ -4,25 +4,16 @@ const SignIn =()=>{
     return(
 
        <>
-       <div className="flex justify-center">
-       <AuthForm
-       
-       fields={[
-          {
-            label:"username",
-            type:"text"
-          },
-          {
-            label:"password",
-            type:"password"
-          },
-       ]}
-       
-        submitButtonLabel="sign in"
-       />
-       </div>
-       
+     <div>
+<div>
+<img src="/images/flowers.jpg" alt="flowers" className="h-screen"/>
+</div>
+
+<div>
   
+</div>
+
+     </div>
       </>
 
     )
