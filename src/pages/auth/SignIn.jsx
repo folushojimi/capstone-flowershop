@@ -24,8 +24,8 @@ const SignIn =()=>{
         submitButtonLabel="sign in"
        />
        </div> 
-       
-       <Link to={"/SignUp"} className="">create account</Link>
+
+       <Link to={"/SignUp"} className="text-green-800">create account</Link>
   </Firstpage>
    
       </>

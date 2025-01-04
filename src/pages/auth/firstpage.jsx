@@ -1,4 +1,4 @@
-const Firstpage =({children, tosignup})=>{
+const Firstpage =({children})=>{
     return(
         <>
       <div className="flex">
