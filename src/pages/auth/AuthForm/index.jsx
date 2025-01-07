@@ -12,8 +12,6 @@ const AuthForm =({fields, submitButtonLabel})=> {
             initialState[field.label] = '';
         }
 
-        
-
         return initialState
 
     });
@@ -34,7 +32,9 @@ const AuthForm =({fields, submitButtonLabel})=> {
               setValues({ ...values, [field.label]: e.target.value});
             }}
             />
-            )}
+            )
+            
+            }
 
             <button className="text-white bg-emerald-700 w-full py-2 rounded-lg mt-4">
             {submitButtonLabel}

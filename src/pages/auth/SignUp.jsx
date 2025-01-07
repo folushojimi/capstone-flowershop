@@ -29,7 +29,7 @@ const SignUp =()=>{
         submitButtonLabel="create account"
          />
          </div>
-         <Link to={"/"} className="text-green-800">sign in</Link> 
+         <Link to={"/"} className="text-green-800 underline">sign in</Link> 
          </Firstpage>
 
 
