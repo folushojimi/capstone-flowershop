@@ -45,16 +45,17 @@ const AuthForm =({fields, submitButtonLabel, onSubmit})=> {
             
             }
 
-            <button className="text-white bg-emerald-700 w-full py-2 rounded-lg mt-4">
-            {submitButtonLabel}
+            <button className="relative text-white bg-emerald-700 w-full py-2 rounded-lg mt-4">
+             
 
              {loading &&
-             <div className="">
+             <div>
             {/*make sure to add the logo and the tailwind animation spinner here*/}
+            <img src="/images/refresh.svg" alt="" className="absolute left-[200px] animate-spin"/>
              </div>
              }
              
-
+             {submitButtonLabel}
             </button> 
 
         </form>
