@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import Fields from "./fields";
 
-const AuthForm =({fields, submitButtonLabel})=> {
+const AuthForm =({fields, submitButtonLabel, onSubmit})=> {
 
 
-    // useState consverted to an object
-
+    // useState converted to an object
     const [values, setValues]=useState(()=> {
         const initialState = {};
         for(let field of fields){
@@ -15,11 +14,21 @@ const AuthForm =({fields, submitButtonLabel})=> {
         return initialState
 
     });
-    console.log(values)
+    // console.log(values)
+
+   const [loading, setLoading]=useState(false)
+
 
     return(
      <>
-        <form className="font-lato bg-white border rounded-lg border-slate-300 m-4 p-4">
+        <form className="font-lato bg-white border rounded-lg border-slate-300 m-4 p-4"
+        onSubmit={async (e)=>{
+            e.preventDefault();
+            setLoading(true);
+            await onSubmit(values);
+            setLoading(false);
+        }}
+        >
             {
 
             fields.map((field)=> 
@@ -38,7 +47,16 @@ const AuthForm =({fields, submitButtonLabel})=> {
 
             <button className="text-white bg-emerald-700 w-full py-2 rounded-lg mt-4">
             {submitButtonLabel}
+
+             {loading &&
+             <div className="">
+            {/*make sure to add the logo and the tailwind animation spinner here*/}
+             </div>
+             }
+             
+
             </button> 
+
         </form>
 
     </>  
